@@ -7,24 +7,59 @@
 		<link rel="stylesheet" type="text/css" charset="utf-8" href="css/style.css" />
 	</head>
 	<body>
+		
+	
+		
 		<div id="formulario">	
 			
+<form name="registro">
 			
-			<form action="">
-  <label for="GET-name">Nombre:</label>
-  <input id="GET-name" type="text" name="name">
-  <input type="submit" value="Save">
+<ul>
+<li><label for="lregistro">Registro:</label></li>	
+	<li><label for="lnombre">Nombre:</label></li>
+	<li><input type="text" name="nombre" size="30" minlength="3"</li>
+	<li><span id="errornombre"></span></li>
+	<li><label for="lapellido">Apellido:</label></li>
+	<li><input id="apellido" type="text" name="apellido" size="30" minlength="3"></li>
+	<li><span id="errorapellido"></span></li>
+	<li><label for="lemail">Email:</label></li>
+	<li><input id="email" type="text" name="email"></li>
+	<li><span id="erroremail"></span></li>
+	<li><label for="ledad">Edad:</label></li>
+	<li><input type="text" name="edad" size="3" maxlength="2"></li>
+	<li><span id="erroredad"></span></li>
+	<li><label for="lsexo">Sexo:</label></li>
+	<li><input type="radio" name="hm" value="h"> Hombre</li>
+	<li><input type="radio" name="hm" value="m"> Mujer</li>
+	<li><input type="radio" name="hm" value="o"> Otro</li>
+	<li><label for="linteres">Temas de interés:</label></li>
+	<li><label><input type="checkbox" name="casillamusica">Musica</label></li>
+	<li><label><input type="checkbox" name="casilladeporte">Deporte</label></li>
+	<li><label><input type="checkbox" name="casillajuegos">Juegos</label></li>
+	<li><label><input type="checkbox" name="casillatecnologia">Tecnologia</label></li>
+	<li><label for="lpais">Pais:</label>
+		<select name="menupais">
+		<option value="margentina">Argentina</option>
+		<option value="mchile">Chile</option>
+		<option value="mbrasil">Brasil</option>
+		<option value="muruguay">Uruguay</option>
+		</select>
+	</li>
+	<li><label for="lcomentarios">Comentarios:</label></li>
+	<textarea name="coment" for="coment" placeholder="Comente brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+	
+	
+	<li><span id="errorcoment"></span></li>
+	<li> <input type="button" value="Enviar" onclick="valida_envia()">
+	</li>
+</ul>
+
 </form>
 
 
-<form action="" >
-  <label for="POST-name">Apellido:</label>
-  <input id="POST-name" type="text" name="apellido">
-  <input type="submit" value="Save">
-</form>
 
 			
 		</div>
-		<script src="calc.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
